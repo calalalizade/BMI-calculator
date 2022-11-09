@@ -16,7 +16,10 @@ interface IState {
 
 function App() {
   const [selected, setSelected] = useState("Male");
-  const [result, setResult] = useState({ index: 0, status: "" });
+  const [result, setResult] = useState<IState["result"]>({
+    index: 0,
+    status: "",
+  });
 
   const [userInput, setUserInput] = useState<IState["userInput"]>({
     age: undefined,
